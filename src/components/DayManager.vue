@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { IWeekDay } from '@/modules/WeekDay';
 import { ref } from 'vue';
-import DayCard from './dayCard.vue';
+import DayCard from './DayCard.vue';
 
 const days = ref<IWeekDay[]>([
   { id: 1, name: 'Lunes', selected: false },
@@ -14,9 +14,9 @@ const days = ref<IWeekDay[]>([
 ]);
 
 
+
 function cambiarSeleccionados(id: number) {
-    for (let index = 0; index < days.value.length; index++) {
-       
+    for (let index = 0; index < days.value.length; index++) { 
     if (days.value[index]!.id === id) {
             days.value[index]!.selected = !days.value[index]!.selected;
         } else {
