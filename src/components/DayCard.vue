@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { IWeekDay } from '@/modules/WeekDay';
-import { ref } from 'vue';
 
 const props = defineProps<{
   day: IWeekDay;
@@ -8,9 +7,9 @@ const props = defineProps<{
 
 function estado() {
     if (!props.day.selected) {
-        return '"shadow-5xs bg-lime-50 p-5 rounded-lg flex flex-col items-center justify-center transition-colors"';
+        return '"shadow-5xs bg-lime-50 m-2 p-5 rounded-lg items-center justify-center transition-colors"';
     } else {
-        return '"shadow-5xs bg-violet-400 p-5 rounded-lg flex flex-col items-center justify-center transition-colors"';
+        return '"shadow-5xs bg-violet-400 m-2 p-5 rounded-lg  items-center justify-center transition-colors"';
     }
 
     
